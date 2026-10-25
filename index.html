@@ -52,6 +52,29 @@
         .custom-shadow {
             box-shadow: 0 10px 30px -5px rgba(27, 53, 46, 0.05);
         }
+        .review-track {
+            align-items: flex-start;
+            scrollbar-width: none;
+            scroll-snap-type: x mandatory;
+            overscroll-behavior-x: contain;
+        }
+        .review-track::-webkit-scrollbar {
+            display: none;
+        }
+        .review-card {
+            flex: 0 0 100%;
+            scroll-snap-align: start;
+        }
+        @media (min-width: 768px) {
+            .review-card {
+                flex-basis: calc((100% - 1.5rem) / 2);
+            }
+        }
+        @media (min-width: 1024px) {
+            .review-card {
+                flex-basis: calc((100% - 3rem) / 3);
+            }
+        }
     </style>
 </head>
 <body class="bg-sand text-slate-800 font-sans antialiased selection:bg-therapy-100 selection:text-therapy-900">
@@ -116,16 +139,16 @@
                 <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
                     <!-- Expertise Badges -->
                     <div class="inline-flex flex-wrap items-center justify-center lg:justify-start gap-2 bg-white px-3.5 py-1.5 rounded-full border border-therapy-100 text-xs text-therapy-700 font-semibold shadow-sm">
-                        <span class="flex items-center gap-1"><i class="fa-solid fa-graduation-cap text-therapy-500"></i> Master SHS</span>
+                        <span class="flex items-center gap-1"><i class="fa-solid fa-graduation-cap text-therapy-500"></i> Master 2 SHS</span>
                         <span class="text-slate-300">•</span>
                         <span class="flex items-center gap-1"><i class="fa-solid fa-certificate text-therapy-500"></i> DU Psychologie</span>
                         <span class="text-slate-300">•</span>
-                        <span class="flex items-center gap-1"><i class="fa-solid fa-user-check text-therapy-500"></i> Thérapeute Certifié</span>
+                        <span class="flex items-center gap-1"><i class="fa-solid fa-user-check text-therapy-500"></i> Thérapeute en TCC & sophrologue</span>
                     </div>
 
                     <!-- Main Heading -->
                     <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 leading-tight">
-                        L'expertise scientifique et humaine au service de votre <span class="text-therapy-600 italic">équilibre intérieur</span>.
+                        Un espace pour prendre du recul, <span class="text-therapy-600 italic">Comprendre et Guérir</span>
                     </h1>
 
                     <!-- Subtitle -->
@@ -154,7 +177,7 @@
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                             </div>
-                            <span class="font-bold text-slate-900">5.0 / 5</span>
+                            <span class="font-bold text-slate-900">5 / 5</span>
                             <span class="text-slate-400">(20+ avis Google)</span>
                         </div>
                         <div class="hidden sm:block text-slate-300">|</div>
@@ -179,7 +202,7 @@
                         <div class="text-center space-y-2 mb-6">
                             <h2 class="font-serif text-2xl font-bold text-slate-900">Axel Neuveglise</h2>
                             <p class="text-sm font-medium text-therapy-600">Thérapeute, Coach & Formateur</p>
-                            <p class="text-xs text-slate-500">Approche pluridisciplinaire</p>
+                            <p class="text-xs text-slate-500">Approche pluridisciplinaire · Thérapies brèves</p>
                         </div>
 
                         <!-- Highlights List -->
@@ -302,7 +325,7 @@
                             <p>La thérapie des schémas est une approche thérapeutique intégrative, développée par Jeffrey Young. Elle s’appuie notamment sur les théories de l’apprentissage et la psychologie cognitive, et intègre des apports de la théorie de l’attachement et de certains courants psychodynamiques.</p>
                             <p>Elle vise à explorer et à comprendre les processus, parfois inconscients, qui influencent les pensées, les émotions et les comportements, ainsi qu’à repérer les schémas répétitifs qui se sont construits au fil de l’histoire de vie.</p>
                             <p>À l’aide d’échanges, de questionnaires et d’autres supports, le travail aide à prendre conscience de ses automatismes et à comprendre leur origine. Cette prise de recul peut ensuite permettre de faire évoluer les schémas qui entravent le quotidien.</p>
-                            <p><a href="https://pubmed.ncbi.nlm.nih.gov/28035734/" target="_blank" rel="noopener noreferrer" class="font-semibold text-therapy-700 underline hover:text-therapy-900">Lire une revue scientifique sur la thérapie des schémas (PubMed)</a></p>
+                            <p><a href="https://fr.wikipedia.org/wiki/Th%C3%A9rapie_des_sch%C3%A9mas" target="_blank" rel="noopener noreferrer" class="font-semibold text-therapy-700 underline hover:text-therapy-900">Découvrir la thérapie des schémas (article Wikipédia.fr).</a></p>
                         </div>
                     </details>
                 </div>
@@ -353,7 +376,7 @@
                             <p>Ces approches peuvent être utilisées dans l’accompagnement de difficultés psychologiques et de blessures émotionnelles ou traumatiques. Elles ne sont pas indiquées pour tout deuil : le choix dépend de la situation et des besoins de la personne.</p>
                             <p>L’EMDR est une approche thérapeutique qui utilise des stimulations bilatérales, notamment visuelles ou sonores, afin de faciliter le traitement de souvenirs traumatiques.</p>
                             <p>Elle peut aussi être envisagée pour certaines phobies ou difficultés anxieuses, selon la situation et après évaluation. Les approches et leur niveau de validation varient selon le trouble.</p>
-                            <p><a href="https://www.nice.org.uk/guidance/ng116/chapter/recommendations" target="_blank" rel="noopener noreferrer" class="font-semibold text-therapy-700 underline hover:text-therapy-900">Consulter les recommandations NICE sur les traitements du stress post-traumatique, dont l’EMDR</a></p>
+                            <p><a href="https://www.emdr-france.org/fr/la-therapie-emdr/decouvrir-therapie-emdr/" target="_blank" rel="noopener noreferrer" class="font-semibold text-therapy-700 underline hover:text-therapy-900">Découvrir la thérapie EMDR (Association EMDR France)</a></p>
                         </div>
                     </details>
                 </div>
@@ -430,7 +453,7 @@
                             <p>La guidance parentale accompagne les parents pour mieux comprendre les besoins de leur enfant et ajuster leurs réactions face aux difficultés éducatives ou comportementales du quotidien. Dans un espace d’écoute et de conseils personnalisés, elle aide à mieux comprendre les émotions, les tensions et les dynamiques familiales.</p>
                             <p>Au fil des séances, les parents peuvent acquérir des outils concrets et des stratégies bienveillantes pour poser un cadre structurant, désamorcer les conflits et favoriser la coopération avec leur enfant.</p>
                             <p>L’objectif est d’apaiser le climat familial, de restaurer la confiance parentale et de renforcer le lien d’attachement. La guidance peut être utile face aux difficultés de comportement, à l’anxiété de l’enfant, aux oppositions répétées ou aux périodes de transition, notamment l’adolescence.</p>
-                            <p><a href="https://www.nice.org.uk/guidance/cg158/chapter/recommendations" target="_blank" rel="noopener noreferrer" class="font-semibold text-therapy-700 underline hover:text-therapy-900">Consulter les recommandations NICE sur les interventions auprès des enfants et des parents</a></p>
+                            <p><a href="https://handicap.gouv.fr/sites/handicap/files/2025-09/Guide-Guidance-parentale-2025-FALC.pdf" target="_blank" rel="noopener noreferrer" class="font-semibold text-therapy-700 underline hover:text-therapy-900">Consulter le guide de guidance parentale en FALC (handicap.gouv.fr)</a></p>
                         </div>
                     </details>
                 </div>
@@ -456,7 +479,7 @@
                             <p>La thérapie de couple propose un cadre de parole où chacun peut exprimer son vécu et écouter celui de l’autre. Avec l’aide du thérapeute, le couple peut repérer les cycles d’incompréhension, clarifier ses besoins et travailler sur la communication et les attentes réciproques.</p>
                             <p>Elle peut accompagner des conflits répétés, une période de transition ou un éloignement relationnel. Elle ne vise pas nécessairement à maintenir la relation : elle aide à réfléchir à la suite de façon plus claire et respectueuse.</p>
                             <p>La démarche suppose que les deux personnes puissent participer librement et en sécurité. En cas de violence, de contrôle ou de peur dans la relation, une thérapie conjointe n’est pas adaptée d’emblée : un accompagnement individuel et des ressources spécialisées sont prioritaires.</p>
-                            <p><a href="https://pubmed.ncbi.nlm.nih.gov/32551734/" target="_blank" rel="noopener noreferrer" class="font-semibold text-therapy-700 underline hover:text-therapy-900">Lire une méta-analyse sur les effets de la thérapie de couple (PubMed)</a></p>
+                            <p><a href="https://www.qare.fr/sante/psychotherapie/therapie-de-couple/" target="_blank" rel="noopener noreferrer" class="font-semibold text-therapy-700 underline hover:text-therapy-900">En savoir plus sur la thérapie de couple (article en français)</a></p>
                         </div>
                     </details>
                     <a href="#contact" class="block w-full mt-5 bg-therapy-600 hover:bg-therapy-700 text-white py-3 rounded-xl font-semibold text-sm transition-all text-center">Prendre contact</a>
@@ -483,20 +506,28 @@
                         <div class="space-y-4">
                             <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Diplômes & Formations</h4>
                             <div class="bg-white p-3.5 rounded-xl border border-slate-200/80 text-xs space-y-1">
-                                <div class="font-bold text-slate-800">Master SHS — Sciences Humaines & Sociales</div>
-                                <div class="text-slate-500">Formation universitaire supérieure</div>
+                                <div class="font-bold text-slate-800">Certificat Executive — Stratégie d’entreprise</div>
+                                <div class="text-slate-500">HEC Paris · 2024 – 2025</div>
                             </div>
                             <div class="bg-white p-3.5 rounded-xl border border-slate-200/80 text-xs space-y-1">
                                 <div class="font-bold text-slate-800">DU en Psychologie</div>
-                                <div class="text-slate-500">Diplôme Universitaire spécialisé</div>
+                                <div class="text-slate-500">Université Toulouse - Jean Jaurès · 2021 – 2022</div>
                             </div>
                             <div class="bg-white p-3.5 rounded-xl border border-slate-200/80 text-xs space-y-1">
-                                <div class="font-bold text-slate-800">Licence Développement Durable & Entreprenariat</div>
-                                <div class="text-slate-500">Compétence en conduite du changement</div>
+                                <div class="font-bold text-slate-800">Thérapeute en TCC et sophrologue</div>
+                                <div class="text-slate-500">Licoes · 2020 – 2021</div>
                             </div>
                             <div class="bg-white p-3.5 rounded-xl border border-slate-200/80 text-xs space-y-1">
-                                <div class="font-bold text-slate-800">Praticien Thérapeute Certifié</div>
-                                <div class="text-slate-500">Formé aux approches TCC, EMDR, Sophrologie et Schémas</div>
+                                <div class="font-bold text-slate-800">Diplôme universitaire (D2E) — Étudiant-entrepreneur, entrepreneuriat</div>
+                                <div class="text-slate-500">Université de Perpignan (UPVD) · 2019 – 2020</div>
+                            </div>
+                            <div class="bg-white p-3.5 rounded-xl border border-slate-200/80 text-xs space-y-1">
+                                <div class="font-bold text-slate-800">Master 2 (M2) — Sciences humaines et sociales, aménagement</div>
+                                <div class="text-slate-500">Université de Perpignan (UPVD) · 2016 – 2017</div>
+                            </div>
+                            <div class="bg-white p-3.5 rounded-xl border border-slate-200/80 text-xs space-y-1">
+                                <div class="font-bold text-slate-800">Licence — Sciences appliquées, Écologie et Société (SES)</div>
+                                <div class="text-slate-500">Université Bretagne Sud · 2012 – 2015</div>
                             </div>
                         </div>
                     </div>
@@ -604,7 +635,7 @@
                 <!-- Consultation Enfant / Ado -->
                 <div class="bg-white p-8 rounded-3xl border-2 border-therapy-500 custom-shadow flex flex-col justify-between relative">
                     <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-therapy-500 text-white text-xs font-bold uppercase tracking-wider px-4 py-1 rounded-full">
-                        Accompagnement Jeunesse
+                        Tarif réduit
                     </div>
                     <div>
                         <div class="flex justify-between items-center mb-4 mt-2">
@@ -639,21 +670,21 @@
                             <i class="fa-solid fa-briefcase text-slate-400"></i>
                         </div>
                         <h3 class="font-serif text-2xl font-bold text-slate-900 mb-2">Coaching & Entreprise</h3>
-                        <p class="text-xs text-slate-500 mb-6">Développement Pro & Bilan</p>
+                        <p class="text-xs text-slate-500 mb-6">Coaching · Formation · Conseil</p>
                         
                         <div class="mb-6">
                             <span class="text-4xl font-bold font-serif text-slate-900">Sur Devis</span>
                         </div>
 
                         <ul class="text-xs text-slate-600 space-y-3 mb-8">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-therapy-500"></i> Coaching professionnel & leadership</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-therapy-500"></i> Gestion des risques psychosociaux</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-therapy-500"></i> Ateliers et formations d'équipe</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-therapy-500"></i> Accompagnement des dirigeants et des équipes</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-therapy-500"></i> Formations en management, gestion du stress et communication</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-therapy-500"></i> Conseil et résolution des difficultés en entreprise</li>
                         </ul>
                     </div>
 
-                    <a href="#contact" class="w-full bg-slate-800 hover:bg-slate-900 text-white py-3 rounded-xl font-semibold text-sm transition-all text-center block">
-                        Demander un devis
+                    <a href="https://axel-neuveglise.odoo.com/" target="_blank" rel="noopener noreferrer" class="w-full bg-slate-800 hover:bg-slate-900 text-white py-3 rounded-xl font-semibold text-sm transition-all text-center block">
+                        Découvrir les services entreprises
                     </a>
                 </div>
 
@@ -661,7 +692,7 @@
 
             <!-- Mutuelle Note -->
             <div class="mt-8 bg-white p-4 rounded-2xl border border-slate-200 text-center text-xs text-slate-500 max-w-2xl mx-auto">
-                <i class="fa-solid fa-circle-info text-therapy-500 mr-1"></i> <strong>Remboursement :</strong> Les séances de psychothérapie ou de coaching ne sont pas remboursées par la Sécurité Sociale, mais de nombreuses <strong>mutuelles complémentaires</strong> prennent en charge une partie des séances. Une facture vous sera remise.
+                <i class="fa-solid fa-circle-info text-therapy-500 mr-1"></i> <strong>Remboursement :</strong> Les séances de thérapie ne sont pas remboursées par la Sécurité Sociale, mais de nombreuses <strong>mutuelles complémentaires</strong> prennent en charge une partie des séances, notamment la <strong>Sophrologie</strong>. Sur demande, une facture vous sera remise.
             </div>
 
         </div>
@@ -674,71 +705,112 @@
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <div class="inline-flex items-center gap-2 bg-amber-50 text-amber-700 px-4 py-1.5 rounded-full text-xs font-bold mb-3 border border-amber-200">
                     <i class="fa-solid fa-star text-amber-400"></i>
-                    Avis Vérifiés Google 5.0 / 5
+                    Avis Vérifiés Google 5 / 5
                 </div>
                 <h2 class="font-serif text-3xl md:text-4xl font-bold text-slate-900">Ce que disent les personnes accompagnées</h2>
-                <p class="text-slate-600 text-base mt-2">Retours d'expérience authentiques sur l'accompagnement d'Axel Neuveglise.</p>
+                <p class="text-slate-600 text-base mt-2">Retours d'expérience authentiques sur l'accompagnement</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <!-- Review 1 -->
-                <div class="bg-sand p-6 rounded-2xl border border-slate-100 flex flex-col justify-between">
+            <div id="review-track" class="review-track flex gap-6 overflow-x-auto pb-3" role="region" aria-roledescription="carrousel" aria-label="Avis des personnes accompagnées" tabindex="0">
+                <div class="review-card bg-sand p-6 rounded-2xl border border-slate-100 flex flex-col justify-between">
                     <div>
-                        <div class="flex text-amber-400 text-xs mb-3">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="text-slate-700 text-sm leading-relaxed italic mb-4">
-                            « Un grand merci à Axel pour son écoute et son grand professionnalisme. Il sait poser les bonnes questions et proposer un cadre extrêmement sécurisant. Je me sens beaucoup plus serein. »
-                        </p>
+                        <div class="flex text-amber-400 text-xs mb-3" aria-label="5 étoiles">★★★★★</div>
+                        <p class="text-slate-700 text-sm leading-relaxed italic mb-4">« Un thérapeute très professionnel et qui apporte un réel accompagnement en s'adaptant aux possibilités de chacun en terme de travail et de profondeur de la thérapie. Je me sens beaucoup plus serein aujourd'hui autant dans ma vie personnelle que professionnelle. Je recommande »</p>
                     </div>
                     <div class="flex items-center gap-3 pt-4 border-t border-slate-200/60">
                         <div class="w-8 h-8 bg-therapy-200 rounded-full flex items-center justify-center font-bold text-xs text-therapy-800">JC</div>
-                        <div>
-                            <div class="text-xs font-bold text-slate-900">Julian C.</div>
-                            <div class="text-[10px] text-slate-400">Avis Google Vérifié</div>
-                        </div>
+                        <div><div class="text-xs font-bold text-slate-900">Julian COLERE</div><div class="text-[10px] text-slate-400">Avis Google</div></div>
                     </div>
                 </div>
-
-                <!-- Review 2 -->
-                <div class="bg-sand p-6 rounded-2xl border border-slate-100 flex flex-col justify-between">
+                <div class="review-card bg-sand p-6 rounded-2xl border border-slate-100 flex flex-col justify-between">
                     <div>
-                        <div class="flex text-amber-400 text-xs mb-3">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="text-slate-700 text-sm leading-relaxed italic mb-4">
-                            « Des séances très enrichissantes avec des méthodes concrètes (EMDR et TCC). On avance vite et avec beaucoup de clarté. Je recommande les yeux fermés. »
-                        </p>
+                        <div class="flex text-amber-400 text-xs mb-3" aria-label="5 étoiles">★★★★★</div>
+                        <p class="text-slate-700 text-sm leading-relaxed italic mb-4">« Axel maîtrise son sujet. C’est une personne d’une grande bienveillance et il est d’une grande aide dans le développement de soi. Je recommande vivement ! »</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-200/60">
+                        <div class="w-8 h-8 bg-therapy-200 rounded-full flex items-center justify-center font-bold text-xs text-therapy-800">MC</div>
+                        <div><div class="text-xs font-bold text-slate-900">maxime colom</div><div class="text-[10px] text-slate-400">Avis Google</div></div>
+                    </div>
+                </div>
+                <div class="review-card bg-sand p-6 rounded-2xl border border-slate-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 text-xs mb-3" aria-label="5 étoiles">★★★★★</div>
+                        <p class="text-slate-700 text-sm leading-relaxed italic mb-4">« Axel Neuveglise. Un prénom et un nom qui en disent déjà beaucoup. Et les séances ont confirmé le présage : un véritable accélérateur de prises de conscience et une remise à neuf pour aller vers la meilleure version de soi-même. Son esprit d'analyse lui permet de comprendre très rapidement les situations exposées et de mettre en oeuvre les outils adéquats pour un accompagnement pertinent et percutant. Les résultats ont été au rendez-vous dès la première séance lors de laquelle il m'a proposé un atelier avec des cartes issues de sa création. N'allez pas le voir si vous tenez à cacher des parts de vous, il met de la lumière partout où il y a de l'ombre ! Un guide précieux sur mon chemin de vie. Merci 🙏 »</p>
                     </div>
                     <div class="flex items-center gap-3 pt-4 border-t border-slate-200/60">
                         <div class="w-8 h-8 bg-therapy-200 rounded-full flex items-center justify-center font-bold text-xs text-therapy-800">AT</div>
-                        <div>
-                            <div class="text-xs font-bold text-slate-900">Alexandra T.</div>
-                            <div class="text-[10px] text-slate-400">Avis Google Vérifié</div>
-                        </div>
+                        <div><div class="text-xs font-bold text-slate-900">Alexandra T</div><div class="text-[10px] text-slate-400">Avis Google</div></div>
                     </div>
                 </div>
-
-                <!-- Review 3 -->
-                <div class="bg-sand p-6 rounded-2xl border border-slate-100 flex flex-col justify-between">
+                <div class="review-card bg-sand p-6 rounded-2xl border border-slate-100 flex flex-col justify-between">
                     <div>
-                        <div class="flex text-amber-400 text-xs mb-3">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="text-slate-700 text-sm leading-relaxed italic mb-4">
-                            « Une bienveillance rare et une réelle finesse d'analyse. Axel m'a aidée à débloquer des schémas ancrés depuis des années. Merci pour votre accompagnement. »
-                        </p>
+                        <div class="flex text-amber-400 text-xs mb-3" aria-label="5 étoiles">★★★★★</div>
+                        <p class="text-slate-700 text-sm leading-relaxed italic mb-4">« Les séances sont extrement riches en émotions et me permettent d'avancer à vitesse grand V. De nature réservée, je me reconstruis, pas à pas vers un véritable moi de conscience et de bonheur, que j'ai encore du mal à décrire mais que je ne cesse de ressentir. C'est donc chargée d'émotions positives, que je vous recommande Axel Neuveglise. Un grand merci Axel. »</p>
                     </div>
                     <div class="flex items-center gap-3 pt-4 border-t border-slate-200/60">
                         <div class="w-8 h-8 bg-therapy-200 rounded-full flex items-center justify-center font-bold text-xs text-therapy-800">SM</div>
-                        <div>
-                            <div class="text-xs font-bold text-slate-900">Solène M.</div>
-                            <div class="text-[10px] text-slate-400">Avis Google Vérifié</div>
-                        </div>
+                        <div><div class="text-xs font-bold text-slate-900">Solene Morys</div><div class="text-[10px] text-slate-400">Avis Google</div></div>
                     </div>
                 </div>
-
+                <div class="review-card bg-sand p-6 rounded-2xl border border-slate-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 text-xs mb-3" aria-label="5 étoiles">★★★★★</div>
+                        <p class="text-slate-700 text-sm leading-relaxed italic mb-4">« Cette rencontre et le travail effectué avec lui, d’une simplicité enfantine mais d’un pouvoir thérapeutique impressionnant, a littéralement positivement changé ma vie.Ses techniques sont simples et sa manière de les expliquer humaine et patiente. Je fais depuis appel à lui quasiment chaque semaine, tel un coach. M’ayant inspiré de suite confiance j’ai suivi à la lettre ses recommandations et me suis sorti rapidement d’une rupture compliquée et résous lentement les noeuds dans mon psychisme. Je souhaite à quiconque ayant besoin d’aide ou de soutien de tenter la rencontre avec Axel,je le trouve très crédible et humble »</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-200/60">
+                        <div class="w-8 h-8 bg-therapy-200 rounded-full flex items-center justify-center font-bold text-xs text-therapy-800">VC</div>
+                        <div><div class="text-xs font-bold text-slate-900">Violon Cello</div><div class="text-[10px] text-slate-400">Avis Google</div></div>
+                    </div>
+                </div>
+                <div class="review-card bg-sand p-6 rounded-2xl border border-slate-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 text-xs mb-3" aria-label="5 étoiles">★★★★★</div>
+                        <p class="text-slate-700 text-sm leading-relaxed italic mb-4">« Un thérapeute très compétent. Il m'a aidé à accepter mon moi conscient ainsi que ce que je refoulais. Axel Neuveglise m'a vraiment aidé à aller mieux, à me centrer sur moi et à régler les problèmes dans ma vie. Ne perdez pas votre énergie, si vous avez besoin, n'hésitez plus, franchissez le pas. »</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-200/60">
+                        <div class="w-8 h-8 bg-therapy-200 rounded-full flex items-center justify-center font-bold text-xs text-therapy-800">CF</div>
+                        <div><div class="text-xs font-bold text-slate-900">Carla François</div><div class="text-[10px] text-slate-400">Avis Google</div></div>
+                    </div>
+                </div>
+                <div class="review-card bg-sand p-6 rounded-2xl border border-slate-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 text-xs mb-3" aria-label="5 étoiles">★★★★★</div>
+                        <p class="text-slate-700 text-sm leading-relaxed italic mb-4">« Axel vous permettra de faire un travail de fonds sur les émotions qui contrôlent l’être, et de revenir à l’essentiel de nos propres valeurs. Mieux comprendre qui on est reste la clef pour vivre et apprécier la vie ! Mille mercis à Axel. »</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-200/60">
+                        <div class="w-8 h-8 bg-therapy-200 rounded-full flex items-center justify-center font-bold text-xs text-therapy-800">AJ</div>
+                        <div><div class="text-xs font-bold text-slate-900">ASL TERRES DE JADE</div><div class="text-[10px] text-slate-400">Avis Google</div></div>
+                    </div>
+                </div>
+                <div class="review-card bg-sand p-6 rounded-2xl border border-slate-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 text-xs mb-3" aria-label="5 étoiles">★★★★★</div>
+                        <p class="text-slate-700 text-sm leading-relaxed italic mb-4">« Merci Axel de m’avoir accompagnée dans la reconnaissance et la libération de mes émotions. Je suis aujourd’hui plus confiante et épanouie à être qui je suis. Je ne peux que recommander ton accompagnement et je te souhaite pleins de belles choses pour la suite. »</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-200/60">
+                        <div class="w-8 h-8 bg-therapy-200 rounded-full flex items-center justify-center font-bold text-xs text-therapy-800">LP</div>
+                        <div><div class="text-xs font-bold text-slate-900">Lola P</div><div class="text-[10px] text-slate-400">Avis Google</div></div>
+                    </div>
+                </div>
+                <div class="review-card bg-sand p-6 rounded-2xl border border-slate-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 text-xs mb-3" aria-label="5 étoiles">★★★★★</div>
+                        <p class="text-slate-700 text-sm leading-relaxed italic mb-4">« Une très belle expérience réalisée par un grand professionnel. Merci pour pour implication et votre dévouement. »</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-200/60">
+                        <div class="w-8 h-8 bg-therapy-200 rounded-full flex items-center justify-center font-bold text-xs text-therapy-800">XC</div>
+                        <div><div class="text-xs font-bold text-slate-900">Xavier Candau</div><div class="text-[10px] text-slate-400">Avis Google</div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center justify-center gap-5 mt-6" aria-label="Navigation des avis">
+                <button id="review-previous" type="button" class="w-10 h-10 rounded-full border border-slate-200 text-slate-700 hover:bg-therapy-50 disabled:opacity-40 disabled:cursor-not-allowed transition-colors" aria-label="Avis précédents">
+                    <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                </button>
+                <span id="review-status" class="text-sm text-slate-500 tabular-nums" aria-live="polite" aria-atomic="true"></span>
+                <button id="review-next" type="button" class="w-10 h-10 rounded-full border border-slate-200 text-slate-700 hover:bg-therapy-50 disabled:opacity-40 disabled:cursor-not-allowed transition-colors" aria-label="Avis suivants">
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </button>
             </div>
         </div>
     </section>
@@ -775,7 +847,7 @@
                             </div>
                             <div>
                                 <h4 class="font-bold text-white mb-1">Horaires de consultation</h4>
-                                <p class="text-therapy-100">Du Lundi au Vendredi : 08h00 – 20h00<br>Samedi : Sur rendez-vous uniquement</p>
+                                <p class="text-therapy-100">Du lundi au vendredi : 09h00 – 19h00<br>Samedi matin : sur rendez-vous uniquement</p>
                             </div>
                         </div>
 
@@ -794,28 +866,29 @@
                 <!-- Contact Form Column -->
                 <div class="lg:col-span-7 bg-white text-slate-800 p-8 md:p-10 rounded-3xl shadow-2xl">
                     <h3 class="font-serif text-2xl font-bold mb-2">Envoyer un message</h3>
-                    <p class="text-slate-500 text-xs mb-6">Pour toute question ou demande d'information préalable à un rendez-vous.</p>
+                    <p class="text-slate-500 text-xs mb-2">Pour toute question ou demande d'information préalable à un rendez-vous.</p>
+                    <p class="text-slate-500 text-xs mb-6">Votre messagerie s’ouvrira avec le message préparé. Vous pourrez le vérifier et l’envoyer depuis votre application.</p>
 
                     <form onsubmit="handleFormSubmit(event)" class="space-y-4">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div>
                                 <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Nom & Prénom *</label>
-                                <input type="text" required placeholder="Votre nom" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-therapy-500">
+                                <input type="text" name="name" required placeholder="Votre nom" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-therapy-500">
                             </div>
                             <div>
                                 <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Téléphone *</label>
-                                <input type="tel" required placeholder="06 00 00 00 00" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-therapy-500">
+                                <input type="tel" name="phone" required placeholder="06 00 00 00 00" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-therapy-500">
                             </div>
                         </div>
 
                         <div>
                             <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Adresse E-mail *</label>
-                            <input type="email" required placeholder="votre.email@exemple.com" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-therapy-500">
+                            <input type="email" name="email" required placeholder="votre.email@exemple.com" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-therapy-500">
                         </div>
 
                         <div>
                             <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Motif de consultation principal</label>
-                            <select class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-therapy-500">
+                            <select name="reason" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-therapy-500">
                                 <option value="">Sélectionnez un motif (optionnel)</option>
                                 <option value="anxiete">Gestion de l'anxiété / Stress / Burn-out</option>
                                 <option value="trauma">Traumatisme / EMDR</option>
@@ -827,11 +900,11 @@
 
                         <div>
                             <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Votre message</label>
-                            <textarea rows="4" placeholder="Expliquez brièvement vos besoins..." class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-therapy-500"></textarea>
+                            <textarea name="message" rows="4" placeholder="Expliquez brièvement vos besoins..." class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-therapy-500"></textarea>
                         </div>
 
                         <button type="submit" class="w-full bg-therapy-600 hover:bg-therapy-700 text-white font-semibold py-4 rounded-xl transition-all shadow-md">
-                            Envoyer le message
+                            Préparer le message
                         </button>
                     </form>
                 </div>
@@ -901,10 +974,79 @@
             });
         }
 
+        const reviewTrack = document.getElementById('review-track');
+        if (reviewTrack) {
+            const reviewCards = Array.from(reviewTrack.querySelectorAll('.review-card'));
+            const reviewStatus = document.getElementById('review-status');
+            const previousReviewButton = document.getElementById('review-previous');
+            const nextReviewButton = document.getElementById('review-next');
+
+            reviewCards.forEach((card, index) => {
+                card.setAttribute('role', 'group');
+                card.setAttribute('aria-roledescription', 'diapositive');
+                card.setAttribute('aria-label', `Avis ${index + 1} sur ${reviewCards.length}`);
+            });
+
+            function updateReviewControls() {
+                const trackBounds = reviewTrack.getBoundingClientRect();
+                const visibleCards = reviewCards.filter(card => {
+                    const bounds = card.getBoundingClientRect();
+                    return bounds.left < trackBounds.right && bounds.right > trackBounds.left;
+                });
+                const firstVisibleIndex = Math.max(0, reviewCards.findIndex(card => {
+                    return card.getBoundingClientRect().right > trackBounds.left + 1;
+                }));
+                const lastVisibleIndex = firstVisibleIndex + visibleCards.length;
+
+                reviewStatus.textContent = `Avis ${firstVisibleIndex + 1}–${lastVisibleIndex} sur ${reviewCards.length}`;
+                previousReviewButton.disabled = reviewTrack.scrollLeft <= 1;
+                nextReviewButton.disabled = reviewTrack.scrollLeft + reviewTrack.clientWidth >= reviewTrack.scrollWidth - 1;
+            }
+
+            function scrollReviews(direction) {
+                const trackBounds = reviewTrack.getBoundingClientRect();
+                const firstVisibleIndex = Math.max(0, reviewCards.findIndex(card => {
+                    return card.getBoundingClientRect().right > trackBounds.left + 1;
+                }));
+                const visibleCount = Math.max(1, reviewCards.filter(card => {
+                    const bounds = card.getBoundingClientRect();
+                    return bounds.left < trackBounds.right && bounds.right > trackBounds.left;
+                }).length);
+                const targetIndex = Math.max(0, Math.min(
+                    reviewCards.length - 1,
+                    firstVisibleIndex + direction * visibleCount
+                ));
+                const targetLeft = reviewCards[targetIndex].getBoundingClientRect().left - trackBounds.left + reviewTrack.scrollLeft;
+
+                reviewTrack.scrollTo({
+                    left: targetLeft,
+                    behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
+                });
+            }
+
+            previousReviewButton.addEventListener('click', () => scrollReviews(-1));
+            nextReviewButton.addEventListener('click', () => scrollReviews(1));
+            reviewTrack.addEventListener('scroll', updateReviewControls, { passive: true });
+            window.addEventListener('resize', updateReviewControls);
+            updateReviewControls();
+        }
+
         function handleFormSubmit(e) {
             e.preventDefault();
-            alert('Merci pour votre message ! Axel Neuveglise vous recontactera dans les plus brefs délais.');
-            e.target.reset();
+            const form = e.target;
+            const formData = new FormData(form);
+            const subject = 'Demande de contact depuis le site';
+            const body = [
+                `Nom et prénom : ${formData.get('name')}`,
+                `Téléphone : ${formData.get('phone')}`,
+                `Adresse e-mail : ${formData.get('email')}`,
+                `Motif : ${formData.get('reason') || 'Non précisé'}`,
+                '',
+                'Message :',
+                formData.get('message') || 'Aucun message complémentaire'
+            ].join('\n');
+
+            window.location.href = `mailto:contact@axelneuveglise.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
         }
 
     </script>
